@@ -33,3 +33,17 @@
 // }
 
 // console.log(isPangram("I like cats, but not mice"))
+
+const findLongestWord = arr => {
+    let longestWord = " "
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].length > longestWord.length) {
+            longestWord = arr[i]
+            answer = (longestWord.match(/[a-z]/g) || []).length
+        }
+    }
+    return answer
+}
+
+console.log(findLongestWord(["hi", "hello"]))
